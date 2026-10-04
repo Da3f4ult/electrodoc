@@ -24,9 +24,11 @@ A successful response looks like this:
 
 ```json
 {
-  "response": "| Jour | Heure | Cours | Enseignant | Groupe | Salle |
-               |------|-------|-------|------------|--------|-------|
-| Lundi | 9h a 11h | mathematiques | ali | group 2 | salle 2 |"
+  "response": "
+| Jour | Heure | Cours | Enseignant | Groupe | Salle |
+|------|-------|-------|------------|--------|-------|
+| Lundi | 9h a 11h | mathematiques | ali | group 2 | salle 2 |
+"
 }
 ```
 
