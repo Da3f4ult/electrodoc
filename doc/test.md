@@ -56,10 +56,9 @@ else:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Output Emploi du Temps</title>
 </head>
 <body>
-    <h1>Emploi du Temps</h1>
+    <h1>Index.html : Emploi du Temps</h1>
     <table>
 <thead>
 <tr>
