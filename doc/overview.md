@@ -12,24 +12,31 @@ Do not send AI requests to `electro.us.ci`; use `ai.electro.us.ci` for all API c
 
 ## Ask the model
 
-Send a JSON `POST` request to `/ask` with a non-empty `prompt`:
+Send a  `POST` request to `/ask` with a non-empty `prompt`:
 
-```bash
-curl -X POST https://ai.electro.us.ci/ask \
-  -H 'Content-Type: application/json' \
-  -d '{"prompt":"Lundi 9h a 11h, cour mathematiques, enseignant ali, group 2, salle 2"}'
+```python
+import requests
+
+API_URL = "https://ai.electro.us.ci/ask"
+
+prompt = (
+    "Lundi 8h a 10h, cour informatique, enseignant Mohamed, group 1, salle 1"
+)
+
+response = requests.post(API_URL, json={"prompt": prompt})
+
+if response.status_code == 200:
+    print(response.json()["response"])
+else:
+    print("Error:", response.status_code, response.text)
 ```
 
 A successful response looks like this:
 
-```json
-{
-  "response": "
+```markdown
 | Jour | Heure | Cours | Enseignant | Groupe | Salle |
 |------|-------|-------|------------|--------|-------|
-| Lundi | 9h a 11h | mathematiques | ali | group 2 | salle 2 |
-"
-}
+| Lundi | 8h a 10h | informatique | mohamed | group 1 | salle 1|
 ```
 
 There is no request-level output-token cap. The model ends its response when it reaches its end-of-turn token or the available context limit. Prompts must be no longer than 20,000 characters.
