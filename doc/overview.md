@@ -17,14 +17,16 @@ Send a JSON `POST` request to `/ask` with a non-empty `prompt`:
 ```bash
 curl -X POST https://ai.electro.us.ci/ask \
   -H 'Content-Type: application/json' \
-  -d '{"prompt":"Explain an API in one sentence."}'
+  -d '{"prompt":"Lundi 9h a 11h, cour mathematiques, enseignant ali, group 2, salle 2"}'
 ```
 
 A successful response looks like this:
 
 ```json
 {
-  "response": "An API lets software communicate through defined requests and responses."
+  "response": "| Jour | Heure | Cours | Enseignant | Groupe | Salle |
+               |------|-------|-------|------------|--------|-------|
+| Lundi | 9h a 11h | mathematiques | ali | group 2 | salle 2 |"
 }
 ```
 
