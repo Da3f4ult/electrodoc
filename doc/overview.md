@@ -33,10 +33,25 @@ else:
 
 A successful response looks like this:
 
-```markdown
-| Jour | Heure | Cours | Enseignant | Groupe | Salle |
-|------|-------|-------|------------|--------|-------|
-| Lundi | 8h a 10h | informatique | mohamed | group 1 | salle 1|
+```html
+<table style="border: solid black 2px; border-collapse: collapse;">
+    <tr>
+        <th style="border: solid black 2px;">Jour</th>
+        <th style="border: solid black 2px;">Heure</th>
+        <th style="border: solid black 2px;">Cours</th>
+        <th style="border: solid black 2px;">Enseignant</th>
+        <th style="border: solid black 2px;">Groupe</th>
+        <th style="border: solid black 2px;">Salle</th>
+    </tr>
+    <tr>
+        <td style="border: solid black 2px;">Lundi</td>
+        <td style="border: solid black 2px;">8h a 10h</td>
+        <td style="border: solid black 2px;">informatique</td>
+        <td style="border: solid black 2px;">Mohamed</td>
+        <td style="border: solid black 2px;">Groupe 1</td>
+        <td style="border: solid black 2px;">Salle 1</td>
+    </tr>
+</table>
 ```
 
 There is no request-level output-token cap. The model ends its response when it reaches its end-of-turn token or the available context limit. Prompts must be no longer than 20,000 characters.
