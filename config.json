@@ -2,4 +2,9 @@
   "slug": "overview",
   "title": "Overview",
   "md": "doc/overview.md"
-}]
+},{
+  "slug": "testing",
+  "title": "Testing",
+  "md": "doc/test.md"
+}
+]
